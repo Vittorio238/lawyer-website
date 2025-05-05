@@ -1,8 +1,6 @@
 /* Stili generali */
 
-html {
-    scroll-snap-type: y mandatory;
-  }
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #000;
+    background-color: #111;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
@@ -31,8 +29,8 @@ ul {
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-align: center;
     letter-spacing: 2px;
+    max-width: 1300px;
 }
 
 /* Header e navigazione */
@@ -61,8 +59,14 @@ nav {
     padding: 0 2rem;
 }
 
+.container-section-title {
+    max-width: 1200px;
+    margin: 0 auto 0;
+}
+
 .logo {
-    margin: -10px;
+    margin-left: -20px;
+    margin-bottom: -5px;
     padding: 0;
 }
 
@@ -188,9 +192,12 @@ nav {
 #attivita {
     padding: 6rem 2rem;
     background-color: #111;
+    margin: 0 auto;
+    position: relative;
+    
+    max-width: 1200px;
     
 }
-
 #attivita .section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -200,15 +207,15 @@ nav {
 
 .attivita-container {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
 }
 
+h1.section-title {
+    position: relative;    
+}
 
 .sticky {
     position: sticky;
-    top: 60px; /* La distanza dalla parte superiore quando diventa sticky */
+    top: 80px; /* La distanza dalla parte superiore quando diventa sticky */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 45px;
@@ -225,18 +232,16 @@ nav {
     margin-top: -2px;
 }
 
-
-
 .content-scroll div {
     flex: 1;
     margin-top: -60px;
     margin-left: 0px;
     padding-left: 0px;
-    margin-bottom: 40px;    
+    margin-bottom: 40px;  
 }
 .content-scroll div.innersidebar {
     max-width: 550px;
-    margin-left: 450px; 
+    margin-left: 450px;   
 }
 
 .attivita-item {
@@ -274,6 +279,10 @@ nav {
 .spanlonger {
     margin-top: -30px;
 }
+.smallest {
+    display: none;
+}
+
 
 
 /* Media queries per responsività */
@@ -304,16 +313,26 @@ nav {
         padding-right: 0;
         margin-bottom: 2rem;
     }*/
-    
+    .attivita-container {
+        padding-top: 30px;
+        border: none;
+    }
     .sticky {
         top: 50px;
         font-size: 25px;
         margin: 0;
     }
     .attivita-item .sticky {
-        margin-top: -35px;
+        margin-top: -38px;
     }
-    
+
+    .attivita-item {
+        border: none;
+    }
+
+    .innersidebar {
+        padding-top: 30px;
+    }
     .content-scroll {
         padding-left: 0;
         border-left: none;
@@ -333,6 +352,9 @@ nav {
 }
 
 @media (max-width: 730px) {
+    header .logo img {
+        width: 55px;
+    }
     .attivita-container {
         flex-direction: column;
     }
@@ -353,6 +375,26 @@ nav {
     .content-scroll div.innersidebar {
         margin-left: 0px;
     }
+    br.mobile {
+        display: none;
+    } 
+    
+    .innersidebar {
+        padding-top: 10px;
+    }
+    
+}
+@media (max-width: 580px) {
+    
+    h1.section-title {
+        text-align: center;
+    }
+
+    h1.speciale {
+        margin-bottom: 80px;
+    }
+    
+    
 }
 
 
@@ -521,11 +563,19 @@ nav {
     margin-bottom: 3rem;
 }
 
-.map {
+iframe {
     height: 300px;
+    width: 600px;
     background-color: #111;
     border-radius: 5px;
     overflow: hidden;
+
+}
+
+@media (max-width: 680px) {
+    iframe {
+        width: 100%;
+    }
 }
 
 .indirizzo {
@@ -656,14 +706,14 @@ footer {
         left: 0;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.95);
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; 
         padding: 2rem 0;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.4s ease;
     }
     
     .nav-links.active {
+        padding-left: 20px;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     

@@ -139,45 +139,77 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('Hero\ avvocato.PNG');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     z-index: -1;
 }
 
 .hero-content {
-    margin-top: 180px;
     padding-bottom: 50px;
     max-width: 800px;
     margin-left: 0;
     position: relative;
     padding-left: 2rem;
-    border-left: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .studio-title {
     font-family: 'Cinzel', serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     position: relative;
     letter-spacing: 5px;    
     animation: fadeInUp 1.5s forwards 0.5s;
 }
 
+
 .hero-description {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1.1rem;
     line-height: 1.8;
-    opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1.5s forwards 1s;
-    max-width: 600px;
+    max-width: 900px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
-    border-left: 4px solid rgba(255, 255, 255, 0.5);
+    margin-right: 40px;
+    margin-top: 40px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.span-titolo {
+    margin-top: -25px;
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+    .hero-content .studio-title {
+        font-size: 2.4rem;
+        margin-top: 50px;
+    }
+    .hero-description {
+        margin-top: 0px;
+    }
+    .span-titolo {
+        position: static;   
+    }
+}
+@media (max-width: 720px) {
+    .hero-content .studio-title {
+        font-size: 2rem;
+        margin-left: -40px;
+    }
+    .hero-description {
+        margin-left: -50px;
+        margin-right: 0;
+    }
+}
+@media (max-width: 600px) {
+    .hero-content .studio-title {
+        font-size: 1.7rem;
+    }
 }
 
 @keyframes fadeInUp {
@@ -194,15 +226,15 @@ nav {
     background-color: #111;
     margin: 0 auto;
     position: relative;
-    
     max-width: 1200px;
-    
 }
 #attivita .section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: -10px;
+    margin-top: -50px;
+    margin-left: 10px;
+    font-size: 3rem;
 }
 
 .attivita-container {
@@ -218,7 +250,7 @@ h1.section-title {
     top: 80px; /* La distanza dalla parte superiore quando diventa sticky */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
     color: #fff;
     margin-left: 5px;
@@ -241,7 +273,7 @@ h1.section-title {
 }
 .content-scroll div.innersidebar {
     max-width: 550px;
-    margin-left: 450px;   
+    margin-left: 400px;   
 }
 
 .attivita-item {
@@ -318,7 +350,7 @@ h1.section-title {
         border: none;
     }
     .sticky {
-        top: 50px;
+        top: 90px;
         font-size: 25px;
         margin: 0;
     }
@@ -543,6 +575,11 @@ h1.section-title {
 .biblioteca-link:hover svg {
     transform: translateX(10px) rotate(45deg);
     background-color: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 450px) {
+    .biblioteca-container h2.section-title {
+        font-size: 10px;
+    }
 }
 
 /* Contatti */

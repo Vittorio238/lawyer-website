@@ -66,6 +66,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Controlla le aree di attività durante lo scroll
     window.addEventListener('scroll', checkAttivita);
 });
+
+
+block.addEventListener('click', function() {
+    opach.style.display = 'block';
+    imgNone.style.filter = 'brightness(0.1)';
+    imgNone.style.marginLeft = '-45%';
+    block.style.display = 'none';
+    none.style.display = 'block';
+});
+
+none.addEventListener('click', function() {
+    opach.style.display = 'none';
+    imgNone.style.display = 'block';
+    block.style.display = 'block';
+    none.style.display = 'none';
+    imgNone.style.filter = 'brightness(1)';
+    imgNone.style.marginLeft = '0';
+});
+
+
 /*
 // Inizializzazione della mappa Google
 function initMap() {

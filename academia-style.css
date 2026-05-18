@@ -1,0 +1,273 @@
+body {
+  margin: 0 auto;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+* {
+  transition: all ease .2s;
+}
+
+
+#attivita {
+  height: 100dvh;
+  padding: 6rem 2rem;
+  padding-bottom: 0;
+  background: linear-gradient(to bottom right, #02001a, #2e4667);
+  background-image: url(Audì\ RS7-R\ ABT\ \(1\).jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0 auto;
+  position: relative;
+}
+
+#attivita-above {
+  text-align: center;
+  position: sticky;
+  top: 30%;
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+
+#attivita-under {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.attiva #attivita-above {
+  opacity: 0;
+}
+
+.attiva #attivita-under {
+  opacity: 1;
+}
+
+#attivita .section-title {
+  font-family: 'Cinzel', serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  margin-bottom: -10px;
+  margin-top: -50px;
+  margin-left: 10px;
+  font-size: 3rem;
+}
+
+.attivita-container {
+  display: flex;
+  max-width: 1200px;
+  margin-left: 60px;
+}
+
+h1.section-title {
+  position: relative;
+  color: white;
+  padding-bottom: 30px;
+}
+
+.sticky {
+  position: sticky;
+  top: 17dvh;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.block {
+  display: none;
+}
+
+.insidetitle {
+  margin-left: 10px;
+  margin-top: -2px;
+}
+
+.content-scroll div {
+  flex: 1;
+  margin-top: -60px;
+  margin-left: 0px;
+  padding-left: 0px;
+  margin-bottom: 40px;
+}
+
+.content-scroll div.innersidebar {
+  max-width: 550px;
+  margin-left: 400px;
+}
+
+.attivita-item {
+  padding-top: 4rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.attivita-item:last-child {
+  border-bottom: none;
+}
+
+/*
+.attivita-item h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-bottom: 1.5rem;
+    margin-top: -3px;
+    margin-left: 5px\;
+    letter-spacing: 1px;
+}*/
+
+.attivita-item .margin-bottom-less {
+  margin-bottom: -60px;
+}
+
+.attivita-item p {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.spanlonger {
+  margin-top: -10px;
+}
+
+.smallest {
+  display: none;
+}
+
+
+
+/* Media queries per responsività */
+@media (max-width: 1100px) {
+  .sticky {
+    font-size: 40px;
+  }
+
+  .content-scroll div.innersidebar {
+    margin-left: 400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sticky {
+    font-size: 35px;
+  }
+
+  .content-scroll div.innersidebar {
+    margin-left: 350px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  /*.attivita-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }*/
+  .attivita-container {
+    padding-top: 30px;
+    border: none;
+  }
+
+  .sticky {
+    top: 90px;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .attivita-item .sticky {
+    margin-top: -38px;
+  }
+
+  .attivita-item {
+    border: none;
+  }
+
+  .innersidebar {
+    padding-top: 30px;
+  }
+
+  .content-scroll {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+  }
+
+  .longer {
+    font-size: 25px;
+  }
+
+  .spanlonger {
+    margin-top: -20px;
+  }
+
+  .content-scroll div.innersidebar {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 730px) {
+  header .logo img {
+    width: 55px;
+  }
+
+  .attivita-container {
+    flex-direction: column;
+  }
+
+  .attivita-item {
+    padding-bottom: 0;
+  }
+
+  .sticky {
+    display: none;
+  }
+
+  .block {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .content-scroll div.innersidebar {
+    margin-left: 0px;
+  }
+
+  br.mobile {
+    display: none;
+  }
+
+  .innersidebar {
+    padding-top: 10px;
+  }
+
+}
+
+@media (max-width: 580px) {
+
+  h1.section-title {
+    text-align: center;
+  }
+
+  h1.speciale {
+    margin-bottom: 80px;
+  }
+}
